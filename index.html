@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Its make communication simple , multimedia share Chat App">
+    <meta name="keywords" content="chatapp, Html css">
+    <meta name="auther" content="Raja">
+
+    <!-- favicon -->
+    <link rel="shortcut icon" href="./assets/images/icons/favicon.ico" type="image/x-icon">
+
+    <!-- icons -->
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+
+    <!-- common styles -->
+    <link rel="stylesheet" href="./assets/css/global.css">
+    <link rel="stylesheet" href="./assets/css/color.css">
+    <link rel="stylesheet" href="./assets/css/stylebits.css">
+    <link rel="stylesheet" href="./assets/css/flex.css">
+    <link rel="stylesheet" href="./assets/css/font.css">
+
+    <!-- component styles -->
+    <link rel="stylesheet" href="./assets/css/btn.css">
+    <link rel="stylesheet" href="./assets/css/page-layout.css">
+    <link rel="stylesheet" href="./assets/css/home.css">
+
+    <!-- responsive style -->
+    <!-- responsive.css -->
+
+    <title>Raja &mdash; Chat App</title>
+</head>
+
+<body>
+    <div class="app-container d-flex">
+        <aside class="side-menu-bar">
+            <div class="logo-container">
+                <a class="logo-link">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        style="fill: var(--c-primary); width: 35; height: 35;">
+                        <path
+                            d="m8.5 18 3.5 4 3.5-4H19c1.103 0 2-.897 2-2V4c0-1.103-.897-2-2-2H5c-1.103 0-2 .897-2 2v12c0 1.103.897 2 2 2h3.5zM7 7h10v2H7V7zm0 4h7v2H7v-2z">
+                        </path>
+                    </svg>
+                </a>
+            </div>
+            <ul class="menu-lists d-flex fd-c">
+                <li class="menu-list">
+                    <a class="menu-link">
+                        <i class="bx bx-user-circle menu-icon"> </i>
+                    </a>
+                </li>
+                <li class="menu-list">
+                    <a class="menu-link">
+                        <i class="bx bx-chat menu-icon"> </i>
+                    </a>
+                </li>
+                <li class="menu-list">
+                    <a class="menu-link">
+                        <i class="bx bxs-user-detail menu-icon"> </i>
+                    </a>
+                </li>
+                <li class="menu-list">
+                    <a class="menu-link">
+                        <i class="bx bx-phone-call menu-icon"> </i>
+                    </a>
+                </li>
+                <li class="menu-list">
+                    <a class="menu-link">
+                        <i class="bx bx-bookmarks menu-icon"> </i>
+                    </a>
+                </li>
+                <li class="menu-list">
+                    <a class="menu-link">
+                        <i class="bx bx-cog menu-icon"> </i>
+                    </a>
+                </li>
+                <li class="menu-list mT-auto">
+                    <a class="menu-link">
+                        <i class="bx bx-moon menu-icon"> </i>
+                    </a>
+                </li>
+                <li class="menu-list">
+                    <a class="menu-link">
+                        <img src="./assets/images/images/avatar-6.jpg" alt="Profile-image" class="profile-img">
+                    </a>
+                </li>
+            </ul>
+        </aside>
+
+        <!-- chat section -->
+        <section class="side-chat-bar">
+            <div class="side-chat-head">
+                <div class="d-flex jc-sb al-c">
+                    <div>
+                        <h2 class="chat-title">Chats</h2>
+                    </div>
+                    <div>
+                        <span class="btn btn-add">+</span>
+                    </div>
+                </div>
+                <div class="search-container pos-rel mT-20">
+                    <input type="text" class="btn form-input" placeholder="Search here...">
+                    <i class='bx bx-search profile-search-icon'></i>
+                </div>
+            </div>
+            <div class="side-chat-list overflow">
+
+                <div class="favourites-chats mT-30">
+                    <div class="pL-20">
+                        <h4 class="chat-types-title">Faourites</h4>
+                    </div>
+                    <ul class="chat-lists">
+                        <li class="chat-list">
+                            <a class="chat-link">
+                                <div class="pos-rel mR-10 d-flex">
+                                    <img src="./assets/images/images/avatar-1.jpg" alt="chat-profile"
+                                        class="chat-profile-img">
+                                    <span class="chat-status"></span>
+                                </div>
+                                <div>
+                                    <span class="chat-profile-name">Carline Ann</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="chat-list active">
+                            <a class="chat-link">
+                                <div class="d-flex mR-10 pos-rel">
+                                    <img src="./assets/images/images/avatar-13.jpg" alt="chat-profile"
+                                        class="chat-profile-img">
+                                    <span class="chat-status"></span>
+                                </div>
+                                <div>
+                                    <span class="chat-profile-name">Alice</span>
+                                </div>
+                                <div class="mL-auto"> <span class="chat-msg-count">10</span></div>
+                            </a>
+                        </li>
+                        <li class="chat-list">
+                            <a class="chat-link">
+                                <div class="pos-rel mR-10 d-flex">
+                                    <img src="./assets/images/images/avatar-12.jpg" alt="chat-profile"
+                                        class="chat-profile-img">
+                                    <span class="chat-status"></span>
+                                </div>
+                                <div>
+                                    <span class="chat-profile-name">Maddy lin</span>
+                                </div>
+                            </a>
+                        </li>
+
+                        <li class="chat-list">
+                            <a class="chat-link">
+                                <div class="pos-rel mR-10 d-flex">
+                                    <img src="./assets/images/images/avatar-14.jpg" alt="chat-profile"
+                                        class="chat-profile-img">
+                                    <span class="chat-status"></span>
+                                </div>
+                                <div>
+                                    <span class="chat-profile-name">Jessica hedge</span>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="direct-msg mT-30">
+                    <div class="pinl-20 d-flex al-c jc-sb">
+                        <div>
+                            <h4 class="chat-types-title">Direct messages</h4>
+                        </div>
+                        <div>
+                            <span class="btn btn-add">+</span>
+                        </div>
+                    </div>
+                    <ul class="chat-lists">
+                        <li class="chat-list">
+                            <a class="chat-link d-flex">
+                                <div class="mR-10 pos-rel">
+                                    <img src="./assets/images/images/avatar-4.jpg" alt="chat-profile-image"
+                                        class="chat-profile-img">
+                                    <span class="chat-status"></span>
+                                </div>
+                                <div>
+                                    <span class="chat-profile-name">Manikanda</span>
+                                </div>
+                                <div class="mL-auto">
+                                    <span class="chat-msg-count">12</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="chat-list ">
+                            <a class="chat-link d-flex">
+                                <div class="mR-10 pos-rel">
+                                    <img src="./assets/images/images/avatar-8.jpg" alt="chat-profile-image"
+                                        class="chat-profile-img">
+                                    <span class="chat-status"></span>
+                                </div>
+                                <div>
+                                    <span class="chat-profile-name">braily</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="chat-list">
+                            <a class="chat-link d-flex">
+                                <div class="mR-10 pos-rel">
+                                    <img src="./assets/images/images/avatar-9.jpg" alt="chat-profile-image"
+                                        class="chat-profile-img">
+                                    <span class="chat-status"></span>
+                                </div>
+                                <div>
+                                    <span class="chat-profile-name">Mayur div</span>
+                                </div>
+                                <div class="mL-auto">
+                                    <span class="chat-msg-count">19</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="chat-list">
+                            <a class="chat-link d-flex">
+                                <div class="mR-10 pos-rel">
+                                    <img src="./assets/images/images/avatar-15.jpg" alt="chat-profile-image"
+                                        class="chat-profile-img">
+                                    <span class="chat-status"></span>
+                                </div>
+                                <div>
+                                    <span class="chat-profile-name">yazhu</span>
+                                </div>
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+
+                <div class="channels-broadcast class mT-30">
+                    <div class="d-flex al-c jc-sb pinl-20">
+                        <div>
+                            <h4 class="chat-types-title">channels</h4>
+                        </div>
+                        <div>
+                            <span class="btn btn-add">+</span>
+                        </div>
+                    </div>
+                    <ul class="channel-lists">
+                        <li class="channel-list">
+                            <a class="channel-link d-flex">
+                                <div>
+                                    <span class="channel-profile mR-20">#</span>
+
+                                    <span class="channel-name">Coding ninja</span>
+
+                                </div>
+                                <div class="mL-auto">
+                                    <span class="chat-msg-count">13</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="channel-list">
+                            <a class="channel-link d-flex">
+                                <div>
+                                    <span class="channel-profile mR-20">#</span>
+
+                                    <span class="channel-name">Advance studies</span>
+
+                                </div>
+                            </a>
+                        </li>
+                        <li class="channel-list">
+                            <a class="channel-link d-flex">
+                                <div>
+                                    <span class="channel-profile mR-20">#</span>
+
+                                    <span class="channel-name">Movie mania</span>
+
+                                </div>
+                                <div class="mL-auto">
+                                    <span class="chat-msg-count">10</span>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- main-section -->
+
+        <main class="section-main">
+            <div class="chat-head d-flex al-c jc-sb">
+                <div class="d-flex al-c">
+                    <div class="d-flex pos-rel mR-15">
+                        <img src="./assets/images/images/avatar-13.jpg" alt="chat-profile-image"
+                            class="main-chat-profile">
+                        <span class="chat-status"></span>
+                    </div>
+                    <div>
+                        <div>
+                            <span class="profile-name">Alice</span>
+                        </div>
+                        <div>
+                            <span class="status">online</span>
+                        </div>
+                    </div>
+                </div>
+                <ul class="chat-menu-lists d-flex">
+                    <li class="chat-menu-list">
+                        <a class="chat-menu-link">
+                            <i class='bx bx-search chat-menu'></i>
+                        </a>
+                    </li>
+                    <li class="chat-menu=list">
+                        <a class="chat-menu-link">
+                            <i class='bx bxs-phone-call chat-menu'></i>
+                        </a>
+                    </li>
+                    <li class="chat-menu-list">
+                        <a class="chat-menu-link">
+                            <i class='bx bx-video chat-menu'></i>
+                        </a>
+                    </li>
+                    <li class="chat-menu-list">
+                        <a class="chat-menu-link">
+                            <i class='bx bxs-info-circle chat-menu'></i>
+                        </a>
+                    </li>
+                    <li class="chat-menu-list">
+                        <a class="chat-menu-link">
+                            <i class='bx bx-dots-vertical-rounded chat-menu'></i>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+            <div class="chat-body overflow">
+                <ul class="chat-rows">
+
+                    <li class="chat-row">
+                        <a class="chat-row-link d-flex jc-c">
+                            <span class="chat-date">Yesterday</span>
+                        </a>
+                    </li>
+
+                    <li class="chat-row">
+                        <a class=" chat-row-link d-flex ">
+                            <div class="chat-row-img-box">
+                                <img src="./assets/images/images/avatar-13.jpg" alt="chat-profile-image"
+                                    class="chat-row-img">
+                            </div>
+                            <div class="mR-5">
+                                <div class=" text-box pos-rel">
+                                    <span class="chat-text">
+                                        Hi, Good Morning Raja
+                                    </span>
+                                </div>
+                                <div>
+                                    <span class="msg-time">11.00 <span class="time-period">am</span></span>
+                                </div>
+                            </div>
+                            <div>
+                                <i class='bx bx-dots-vertical-rounded row-menu'></i>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li class="chat-row ">
+                        <a class=" chat-row-link d-flex jc-e">
+                            <div>
+                                <i class='bx bx-dots-vertical-rounded row-menu'></i>
+                            </div>
+                            <div>
+                                <div class="text-box-send pos-rel">
+                                    <span class="chat-text chat-text-send">
+                                        Good Morning, what about weekend plan ?
+                                    </span>
+                                </div>
+                                <div class="d-flex jc-e g-5">
+                                    <div>
+                                        <i class='bx bx-check-double'></i>
+                                    </div>
+                                    <span class="msg-time">11.02 <span class="time-period">am</span></span>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li class="chat-row">
+                        <a class=" chat-row-link d-flex ">
+                            <div class="chat-row-img-box">
+                                <img src="./assets/images/images/avatar-13.jpg" alt="chat-profile-image"
+                                    class="chat-row-img">
+                            </div>
+                            <div class="mR-5">
+                                <div class=" text-box pos-rel">
+                                    <span class="chat-text">
+                                        Yes. We can go for a trip this weekend
+                                    </span>
+                                </div>
+                                <div>
+                                    <span class="msg-time">11.05 <span class="time-period">am</span></span>
+                                </div>
+                            </div>
+                            <div>
+                                <i class='bx bx-dots-vertical-rounded row-menu'></i>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li class="chat-row ">
+                        <a class=" chat-row-link d-flex jc-e">
+                            <div>
+                                <i class='bx bx-dots-vertical-rounded row-menu'></i>
+                            </div>
+                            <div>
+                                <div class="text-box-send pos-rel">
+                                    <span class="chat-text chat-text-send">
+                                        superu👌enga porom yaru yarellam porom
+                                    </span>
+                                </div>
+                                <div class="d-flex jc-e g-5">
+                                    <div>
+                                        <i class='bx bx-check-double'></i>
+                                    </div>
+                                    <span class="msg-time">11.30 <span class="time-period">am</span></span>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li class="chat-row">
+                        <a class="chat-row-link receive d-flex">
+                            <!-- <div class="chat-row-img-box">
+                                <img src="./assets/images/images/avatar-13.jpg" alt="chat-profile-image"
+                                    class="chat-row-img">
+                            </div> -->
+                            <div class="mR-5">
+                                <div class=" text-box pos-rel">
+                                    <span class="chat-text">
+                                        Goa pora plan ah execute paniralam.😊
+                                    </span>
+                                </div>
+                                <!-- <div>
+                                    <span class="msg-time">11.00 <span class="time-period">am</span></span>
+                                </div> -->
+                            </div>
+                            <div>
+                                <i class='bx bx-dots-vertical-rounded row-menu'></i>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li class="chat-row">
+                        <a class=" chat-row-link d-flex ">
+                            <div class="chat-row-img-box">
+                                <img src="./assets/images/images/avatar-13.jpg" alt="chat-profile-image"
+                                    class="chat-row-img">
+                            </div>
+                            <div class="mR-5">
+                                <div>
+                                    <span class="chat-text">
+                                        Nee, Na , Prashanth , subash , Abishek 2 peru inu confirm panala
+                                    </span>
+                                </div>
+                                <div>
+                                    <span class="msg-time">4.00 <span class="time-period">pm</span></span>
+                                </div>
+                            </div>
+                            <div>
+                                <i class='bx bx-dots-vertical-rounded row-menu'></i>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li class="chat-row ">
+                        <a class=" chat-row-link d-flex jc-e">
+                            <div>
+                                <i class='bx bx-dots-vertical-rounded row-menu'></i>
+                            </div>
+                            <div>
+                                <div class="text-box-send pos-rel">
+                                    <span class="chat-text chat-text-send">
+                                        Adipozhi🙌 confirm panitu solu ticket book paniralam
+                                    </span>
+                                </div>
+                                <div class="d-flex jc-e g-5">
+                                    <div>
+                                        <i class='bx bx-check-double'></i>
+                                    </div>
+                                    <span class="msg-time">5.00 <span class="time-period">pm</span></span>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li class="chat-row">
+                        <a class=" chat-row-link d-flex ">
+                            <div class="chat-row-img-box">
+                                <img src="./assets/images/images/avatar-13.jpg" alt="chat-profile-image"
+                                    class="chat-row-img">
+                            </div>
+                            <div class="mR-5">
+                                <div class=" text-box pos-rel">
+                                    <span class="chat-text">
+                                        6 peru confirm ticket potutu anupiru
+                                    </span>
+                                </div>
+                                <div>
+                                    <span class="msg-time">6.30 <span class="time-period">pm</span></span>
+                                </div>
+                            </div>
+                            <div>
+                                <i class='bx bx-dots-vertical-rounded row-menu'></i>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li class="chat-row">
+                        <a class="chat-row-link d-flex jc-c">
+                            <span class="chat-date">Today</span>
+                        </a>
+                    </li>
+
+                    <li class="chat-row ">
+                        <a class=" chat-row-link d-flex jc-e">
+                            <div>
+                                <i class='bx bx-dots-vertical-rounded row-menu'></i>
+                            </div>
+                            <div>
+                                <div class="text-box-send pos-rel">
+                                    <span class="chat-text chat-text-send">
+                                        Done uh 😊
+                                    </span>
+                                </div>
+                                <div class="d-flex jc-e g-5">
+                                    <div>
+                                        <i class='bx bx-check-double'></i>
+                                    </div>
+                                    <span class="msg-time">7.00 <span class="time-period">am</span></span>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li class="chat-row text-right ">
+                        <a class="chat-row-link file-attach d-inline text-box-send pos-rel">
+                            <div class="file-attach-outer  d-flex jc-e ">
+
+                                <div class="d-flex al-c file-attach-inner ">
+                                    <div class="attachment-icon-box mR-10">
+                                        <i class='bx bxs-file-jpg'></i>
+                                    </div>
+                                    <div>
+                                        <div class="mR-10">
+                                            <span class="file-name">Confirm-Train-ticket.jpg</span>
+                                        </div>
+                                        <div>
+                                            <span class="file-size f13">1.3 <span class="f13">MB</span></span>
+                                        </div>
+                                    </div>
+
+                                    <div class="download-icon-box">
+                                        <i class='bx bxs-download'></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-flex jc-e g-5">
+                                <div>
+                                    <i class='bx bx-check-double'></i>
+                                </div>
+                                <div>
+                                    <span class="msg-time">7.05 <span>am</span></span>
+                                </div>
+                            </div>
+
+
+                        </a>
+                    </li>
+
+                    <li class="chat-row">
+                        <a class=" chat-row-link d-flex ">
+                            <div class="chat-row-img-box">
+                                <img src="./assets/images/images/avatar-13.jpg" alt="chat-profile-image"
+                                    class="chat-row-img">
+                            </div>
+                            <div class="mR-5">
+                                <div class=" text-box pos-rel">
+                                    <span class="chat-text">
+                                        😍💃💪🤞
+                                    </span>
+                                </div>
+                                <div>
+                                    <span class="msg-time">7.30 <span class="time-period">am</span></span>
+                                </div>
+                            </div>
+                            <div>
+                                <i class='bx bx-dots-vertical-rounded row-menu'></i>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="chat-row ">
+                        <a class=" chat-row-link d-flex jc-e">
+                            <div>
+                                <i class='bx bx-dots-vertical-rounded row-menu'></i>
+                            </div>
+                            <div>
+                                <div>
+                                    <img src="./assets/images/images/chat-img-1.jpg" class="s200" alt="chat-image">
+                                    <img src="./assets/images/images/chat-img-2.png" class="s200" alt="chat-image">
+                                </div>
+                                <div class="d-flex jc-e g-5">
+                                    <div>
+                                        <i class='bx bx-check-double'></i>
+                                    </div>
+                                    <span class="msg-time">7.35 <span class="time-period">am</span></span>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li class="chat-row">
+                        <a class=" chat-row-link d-flex ">
+                            <div class="chat-row-img-box">
+                                <img src="./assets/images/images/avatar-13.jpg" alt="chat-profile-image"
+                                    class="chat-row-img">
+                            </div>
+                            <div class="mR-5">
+                                <div>
+                                    <div>
+                                        <img src="./assets/images/images/chat-img-3.jpg" alt="chat-image" class="s200">
+                                    </div>
+                                </div>
+                                <div>
+                                    <span class="msg-time">7.30 <span class="time-period">am</span></span>
+                                </div>
+                            </div>
+                            <div>
+                                <i class='bx bx-dots-vertical-rounded row-menu'></i>
+                            </div>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+
+            <footer class="section-footer">
+                <div class="footer-container d-flex al-c">
+                    <div class="footer-box">
+                        <a class="footer-btn">
+                            <i class='bx bx-dots-horizontal-rounded'></i>
+                        </a>
+                    </div>
+                    <div class="footer-box">
+                        <a class="footer-btn">
+                            <i class='bx bx-smile'></i>
+                        </a>
+                    </div>
+                    <div class="footer-box msg">
+                        <input type="text" class="btn msg-input" placeholder="Type Your message">
+                    </div>
+                    <div class="footer-box">
+                        <a class="footer-btn">
+                            <i class='bx bx-microphone'></i>
+                        </a>
+                    </div>
+                    <div class="footer-box send-msg">
+                        <a class="footer-btn ">
+                            <i class='bx bxs-send'></i>
+                        </a>
+                    </div>
+                </div>
+            </footer>
+
+        </main>
+
+    </div>
+</body>
+
+</html>

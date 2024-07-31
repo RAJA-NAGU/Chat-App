@@ -1,0 +1,41 @@
+:root {
+    --w-side-menu: 80px;
+    --w-side-chat: 300px;
+    --br-sm: 4px;
+    --br-md: 8px;
+    --br-lg: 16px;
+    --br-full: 50%;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 14px;
+    font-family: var(--font-regular);
+    line-height: 1.3;
+    text-align: left;
+    color: var(--c-gray);
+    background-color: var(--c-white);
+}
+
+ul li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.s200 {
+    width: 200px;
+    height: 200px;
+}
