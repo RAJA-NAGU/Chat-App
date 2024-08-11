@@ -99,18 +99,15 @@
     padding-block: 15px;
 }
 
-.chat-list,
-.channel-list {
-    padding: 5px 20px;
-}
-
 .channel-lists {
     padding-bottom: 0;
 }
 
-.chat-link {
+.chat-link,
+.channel-link {
     display: flex;
     align-items: center;
+    padding: 5px 20px;
 }
 
 .chat-profile-img {
@@ -142,23 +139,34 @@
     border-radius: var(--br-sm);
 }
 
-.chat-list.active {
+.chat-link.active,
+.chat-link:hover {
     background-color: var(--c-primary);
 }
 
-.chat-list.active .chat-profile-name {
+.chat-link.active .chat-profile-name,
+.chat-link:hover {
     color: var(--c-white);
     font-weight: var(--font-semibold);
 }
 
-.chat-list.active .chat-msg-count {
+.chat-link.active .chat-msg-count {
     background-color: var(--c-teal);
     color: var(--c-white);
 }
 
-.channel-list.active .channel-name {
+.chat-link:hover .chat-msg-count {
+    background-color: var(--c-teal);
+    color: var(--c-white);
+}
+
+.channel-link.active .channel-name,
+.channel-link.active .channel-profile,
+.channel-link:hover .channel-name,
+.channel-link:hover .channel-profile {
     font-family: var(--font-semibold);
 }
+
 
 /* ///////////////////////// */
 /* footer */
